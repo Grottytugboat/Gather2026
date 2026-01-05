@@ -24,12 +24,16 @@ export default function HexagonalGrid() {
 
     if (!canvasRef.current || !containerRef.current) return
 
+    // Capture stable references for use in callbacks + cleanup
+    const canvasEl = canvasRef.current
+    const containerEl = containerRef.current
+
     const initGrid = () => {
-      if (!canvasRef.current || !window.Grid1Background || !containerRef.current) return
+      if (!window.Grid1Background) return
 
       try {
         // Initialize the grid background
-        const bg = window.Grid1Background(canvasRef.current)
+        const bg = window.Grid1Background(canvasEl)
         bgRef.current = bg
 
         // Set black background for the scene
@@ -62,9 +66,9 @@ export default function HexagonalGrid() {
 
         // Add mouse move interaction
         const handleMouseMove = (e: MouseEvent) => {
-          if (!containerRef.current || !bg.grid) return
-          
-          const rect = containerRef.current.getBoundingClientRect()
+          if (!bg.grid) return
+
+          const rect = containerEl.getBoundingClientRect()
           const x = ((e.clientX - rect.left) / rect.width) * 2 - 1
           const y = -((e.clientY - rect.top) / rect.height) * 2 + 1
           
@@ -76,7 +80,7 @@ export default function HexagonalGrid() {
         }
 
         mouseHandlerRef.current = handleMouseMove
-        containerRef.current.addEventListener('mousemove', handleMouseMove)
+        containerEl.addEventListener('mousemove', handleMouseMove)
       } catch (error) {
         console.error('Error initializing hexagonal grid:', error)
       }
@@ -93,9 +97,7 @@ export default function HexagonalGrid() {
         if (window.onGridLoaded) window.onGridLoaded();
       `
       window.onGridLoaded = () => {
-        if (canvasRef.current) {
-          initGrid()
-        }
+        initGrid()
       }
       document.head.appendChild(script)
     } else if (window.Grid1Background) {
@@ -105,17 +107,15 @@ export default function HexagonalGrid() {
 
     // Listen for module load event
     const handleGridLoaded = () => {
-      if (canvasRef.current) {
-        initGrid()
-      }
+      initGrid()
     }
     window.addEventListener('gridModuleLoaded', handleGridLoaded)
 
     return () => {
       window.removeEventListener('gridModuleLoaded', handleGridLoaded)
       // Cleanup mouse event listener
-      if (containerRef.current && mouseHandlerRef.current) {
-        containerRef.current.removeEventListener('mousemove', mouseHandlerRef.current)
+      if (mouseHandlerRef.current) {
+        containerEl.removeEventListener('mousemove', mouseHandlerRef.current)
         mouseHandlerRef.current = null
       }
       // Cleanup grid
