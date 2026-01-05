@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usegather.com.au/sitemap.xml

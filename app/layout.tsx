@@ -1,19 +1,41 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { defaultMetadata, generateStructuredData } from './metadata'
 
-export const metadata: Metadata = {
-  title: 'Gather - Stop Babysitting Systems That Kill Sales',
-  description: 'Gather stores customer data once, then pushes it wherever it needs to go — so agencies don't have to keep fixing broken connections.',
-}
+export const metadata: Metadata = defaultMetadata
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const organizationSchema = generateStructuredData('Organization')
+  const softwareSchema = generateStructuredData('SoftwareApplication')
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {organizationSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          />
+        )}
+        {softwareSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+          />
+        )}
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

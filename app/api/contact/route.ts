@@ -1,7 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Helper function to escape HTML
+function escapeHtml(text: string): string {
+  const map: { [key: string]: string } = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  }
+  return text.replace(/[&<>"']/g, (m) => map[m])
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,17 +37,25 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY)
       await resend.emails.send({
         from: process.env.FROM_EMAIL || 'onboarding@resend.dev',
         to: process.env.TO_EMAIL || 'tim@sondersites.com',
-        subject: `New Contact Form Submission from ${name}`,
+        subject: `New Contact Form Submission from ${escapeHtml(name)}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
         `,
+      })
+    } else {
+      // In development, log the submission instead
+      console.log('Contact form submission (RESEND_API_KEY not set):', {
+        name,
+        email,
+        message,
       })
     }
 
