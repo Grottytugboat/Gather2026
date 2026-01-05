@@ -56,6 +56,11 @@ export const defaultMetadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   verification: {
     // Add verification codes here when available
     // google: 'your-google-verification-code',
