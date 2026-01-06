@@ -25,7 +25,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Why can\'t I use Klaviyo\'s native Lightspeed integration for Vend?',
-    answer: 'Klaviyo\'s native Lightspeed integration does not support Lightspeed Retail X (Vend). For Vend/Lightspeed Retail X, you need a third-party solution like Gather to sync data to Klaviyo.',
+    answer: 'While Lightspeed and Klaviyo now have a native integration, it\'s basic and limited. Gather offers way more - real-time two-way sync, better filtering, more data points, and real human support. For Vend/Lightspeed Retail X, Gather is the better choice for a powerful, reliable integration.',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function VendIntegrationPage() {
                 Vend was acquired by Lightspeed and is now called Lightspeed X-Series. While the platform has changed names, many retailers still refer to it as Vend. Gather supports syncing Vend/Lightspeed X-Series data to Klaviyo and other marketing platforms.
               </p>
               <p className="text-lg text-black dark:text-white leading-relaxed font-bold">
-                Unlike Klaviyo\'s native integration which doesn\'t work with Lightspeed Retail X at all, Gather was built specifically for Lightspeed Retail X (Vend), enabling you to sync your Vend customer data and sales to Klaviyo for better email marketing campaigns.
+                While Lightspeed and Klaviyo now have a native integration, it's basic and limited. Gather was built specifically for Lightspeed Retail X (Vend) and offers way more - real-time two-way sync, better filtering, more data points, and real human support. Gather enables you to sync your Vend customer data and sales to Klaviyo for better email marketing campaigns.
               </p>
             </div>
           </div>

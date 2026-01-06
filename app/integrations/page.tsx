@@ -38,7 +38,7 @@ const integrations = [
   {
     name: 'Vend (Lightspeed X-Series)',
     href: '/integrations/vend',
-    description: 'Sync X-Series data where native integrations fall short.',
+    description: 'Way better than the native integration - real-time two-way sync with advanced features.',
   },
   {
     name: 'Cin7',

@@ -19,12 +19,12 @@ const blogPosts: Record<string, {
     content: (
       <>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
-          If you're trying to connect Lightspeed Retail X-Series (formerly Vend) to Klaviyo, you've probably discovered that Klaviyo's native integration doesn't support X-Series. This leaves you with a few options, each with their own headaches. Let's break down the best ways to sync Lightspeed X to Klaviyo.
+          If you're trying to connect Lightspeed Retail X-Series (formerly Vend) to Klaviyo, you might know that Lightspeed and Klaviyo now have a native integration. However, it's basic and limited. Let's break down the best ways to sync Lightspeed X to Klaviyo and why Gather is the better choice.
         </p>
 
-        <h2 className="text-3xl font-black text-black dark:text-white mb-4 mt-8 uppercase">The Problem: No Native Integration</h2>
+        <h2 className="text-3xl font-black text-black dark:text-white mb-4 mt-8 uppercase">The Problem: Basic Native Integration</h2>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
-          Klaviyo's native Lightspeed integration does not work with Lightspeed Retail X. For Lightspeed Retail X, you're on your own. This is a common frustration in the Klaviyo community forums, where merchants and agencies have been asking for X-Series support for years.
+          While Lightspeed and Klaviyo now have a native integration, it's a basic one-way sync with limited features. For agencies and retailers who need more control, better filtering, two-way sync, and real support, the native integration falls short. This is why many agencies choose Gather instead.
         </p>
 
         <h2 className="text-3xl font-black text-black dark:text-white mb-4 mt-8 uppercase">Option 1: Manual Export/Import (Not Recommended)</h2>
@@ -179,16 +179,16 @@ const blogPosts: Record<string, {
 
         <h2 className="text-3xl font-black text-black dark:text-white mb-4 mt-8 uppercase">1. Native Klaviyo Integrations</h2>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
-          <strong>What it is:</strong> Klaviyo offers native integrations for some POS systems, like Shopify POS, but not for Lightspeed Retail X.
+          <strong>What it is:</strong> Klaviyo offers native integrations for some POS systems, including Lightspeed Retail X. However, it's a basic one-way sync with limited features.
         </p>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
           <strong>Pros:</strong> No-code setup, officially supported, no additional cost.
         </p>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
-          <strong>Cons:</strong> No support for Lightspeed Retail X, syncs on fixed schedules (hourly), no advanced filtering options, can't sync historical data easily.
+          <strong>Cons:</strong> Basic one-way sync only, syncs on fixed schedules (hourly), no advanced filtering options, can't sync historical data easily, limited data points, no two-way sync, generic support.
         </p>
         <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-6">
-          <strong>Best for:</strong> Retailers using supported POS systems who don't need real-time sync or advanced controls.
+          <strong>Best for:</strong> Retailers who need a basic connection and don't need real-time sync, advanced controls, or two-way data flow.
         </p>
 
         <h2 className="text-3xl font-black text-black dark:text-white mb-4 mt-8 uppercase">2. Zapier</h2>

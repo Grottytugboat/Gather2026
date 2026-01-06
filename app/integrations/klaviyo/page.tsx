@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'How is this different from Klaviyo\'s native integrations?',
-    answer: 'Gather works with platforms that Klaviyo doesn\'t natively support (like Lightspeed X-Series), provides more control over data mapping, prevents duplicates automatically, and enables complex multi-platform syncs that native integrations can\'t handle.',
+    answer: 'While Klaviyo now has native integrations for some platforms like Lightspeed, Gather provides way more control and power. Gather offers real-time two-way sync, better data mapping, automatic duplicate prevention, advanced filtering, and enables complex multi-platform syncs that native integrations can\'t handle. Plus, you get real human support when you need it.',
   },
 ]
 
@@ -72,7 +72,7 @@ export default function KlaviyoIntegrationPage() {
                 Complete Customer Data in Klaviyo
               </h2>
               <p className="text-lg text-black dark:text-white leading-relaxed font-bold mb-4">
-                Klaviyo is powerful, but it only works with the data you give it. Native integrations are limited - Klaviyo does not support Lightspeed Retail X. For Lightspeed Retail X, you need a solution like Gather.
+                Klaviyo is powerful, but it only works with the data you give it. While Lightspeed and Klaviyo now have a native integration, it's basic and limited. Gather offers way more - real-time two-way sync, better filtering, more data points, and real human support. For a powerful Lightspeed Retail X integration, Gather is the better choice.
               </p>
               <p className="text-lg text-black dark:text-white leading-relaxed font-bold">
                 Gather syncs data from Lightspeed Retail X, Shopify, and other platforms to Klaviyo automatically. Every purchase, customer update, and behavioral event flows into Klaviyo in real-time, enabling true omnichannel email marketing.

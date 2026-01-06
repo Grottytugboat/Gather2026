@@ -11,7 +11,7 @@ import { generateStructuredData } from './metadata'
 const allFAQs = [
   {
     question: 'Does Klaviyo integrate with Lightspeed X-Series?',
-    answer: 'Klaviyo\'s native integration does not support Lightspeed Retail X. You need a third-party solution like Gather. Gather was built specifically for Lightspeed Retail X to Klaviyo integration, with real-time two-way sync and real human support.',
+    answer: 'Yes, Lightspeed and Klaviyo now have a native integration, but Gather offers a much better solution. Gather provides real-time two-way sync, more data points, better filtering options, and real human support. We built Gather specifically for Lightspeed Retail X to Klaviyo integration and it\'s way more powerful than the native option.',
   },
   {
     question: 'How does Gather compare to Zapier for Lightspeed Klaviyo integration?',

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const faqs: FAQItem[] = [
   {
     question: 'Which Lightspeed platforms does Gather support?',
-    answer: 'Gather was built specifically for Lightspeed Retail X (formerly Vend). Unlike Klaviyo\'s native integration which doesn\'t support X-Series at all, Gather is custom-made for this platform with real-time two-way sync and real human support.',
+    answer: 'Gather was built specifically for Lightspeed Retail X (formerly Vend). While Lightspeed and Klaviyo now have a native integration, it\'s basic and limited. Gather is custom-made for this platform with real-time two-way sync, better filtering, more data points, and real human support - way better than the native option.',
   },
   {
     question: 'How does Lightspeed to Klaviyo sync work?',

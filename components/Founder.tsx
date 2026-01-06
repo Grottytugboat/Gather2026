@@ -6,7 +6,7 @@ import Signature from './Signature'
 
 export default function Founder() {
   return (
-    <section id="contact" className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b-4 border-black dark:border-white">
+    <section id="contact" className="relative pt-12 sm:pt-16 md:pt-24 pb-6 sm:pb-8 md:pb-12 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b-4 border-black dark:border-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark text-xs sm:text-sm font-black text-black dark:text-white mb-4 sm:mb-6 uppercase">
@@ -17,15 +17,15 @@ export default function Founder() {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-8 sm:mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-4 sm:mb-6 md:mb-8">
           {/* Combined Founder Block */}
           <div className="p-4 sm:p-6 md:p-8 lg:p-10 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark relative">
             {/* Profile Section with Signature */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b-2 sm:border-b-4 border-black dark:border-white">
-              <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 flex-shrink-0 rounded-none border-3 sm:border-4 md:border-[6px] border-black dark:border-white shadow-brutal sm:shadow-brutal-lg dark:shadow-brutal-dark sm:dark:shadow-brutal-lg-dark overflow-hidden bg-white dark:bg-slate-900">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 flex-shrink-0 rounded-none border-3 sm:border-4 md:border-[6px] border-black dark:border-white shadow-brutal sm:shadow-brutal-lg dark:shadow-brutal-dark sm:dark:shadow-brutal-lg-dark overflow-visible bg-white dark:bg-slate-900">
                 <Image
                   src="/profile.png"
-                  alt="Tim - Founder of Gather"
+                  alt="Tim Sullivan - Founder of Gather"
                   fill
                   className="object-cover"
                   priority
@@ -37,26 +37,26 @@ export default function Founder() {
                     }
                   }}
                 />
-              </div>
-              <div className="flex-1 flex flex-col items-center sm:items-start w-full sm:w-auto text-center sm:text-left">
-                <div className="mb-4 sm:mb-5">
-                  <p className="text-3xl sm:text-4xl md:text-5xl font-black text-black dark:text-white mb-2 uppercase tracking-tight">Tim</p>
-                  <p className="text-sm sm:text-base font-bold text-black dark:text-white uppercase tracking-wider">Founder, Gather</p>
-                </div>
-                <div className="flex justify-center sm:justify-start mb-4 sm:mb-5">
-                  <Signature />
-                </div>
                 <a
                   href="https://x.com/Timishuge"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 bg-white dark:bg-slate-900 text-black dark:text-white font-black hover:bg-gather-green dark:hover:bg-gather-green hover:text-black dark:hover:text-white transition-all duration-150 text-sm sm:text-base uppercase border-2 sm:border-3 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-1 hover:translate-y-1 min-h-[44px]"
+                  className="absolute bottom-0 right-0 translate-x-1 translate-y-1 inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-black dark:bg-white text-white dark:text-black hover:bg-gather-green dark:hover:bg-gather-green hover:text-black dark:hover:text-white transition-all duration-150 border-2 border-black dark:border-white shadow-brutal-sm dark:shadow-brutal-sm-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-0 hover:translate-y-0 z-10"
+                  aria-label="Follow me on X"
                 >
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
-                  Follow me on X
                 </a>
+              </div>
+              <div className="flex-1 flex flex-col items-center sm:items-start w-full sm:w-auto text-center sm:text-left">
+                <div className="mb-4 sm:mb-5">
+                  <p className="text-xl sm:text-2xl md:text-3xl font-black text-black dark:text-white mb-2 uppercase tracking-tight">Tim Sullivan</p>
+                  <p className="text-xs sm:text-sm md:text-base font-bold text-black dark:text-white uppercase tracking-wider">Founder, Gather</p>
+                </div>
+                <div className="flex justify-center sm:justify-start mb-4 sm:mb-5">
+                  <Signature />
+                </div>
               </div>
             </div>
             

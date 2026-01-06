@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Which POS systems work with Klaviyo?',
-    answer: 'Gather currently supports Lightspeed Retail X with more platforms coming soon. Klaviyo\'s native integrations are limited-they only support Shopify POS and do not support Lightspeed Retail X. For Lightspeed Retail X, you need a third-party integration like Gather.',
+    answer: 'Gather currently supports Lightspeed Retail X with more platforms coming soon. While Lightspeed and Klaviyo now have a native integration, it\'s basic and limited. Gather offers way more features - real-time two-way sync, better filtering, more data points, and real human support. For a powerful Lightspeed Retail X integration, Gather is the better choice.',
   },
 ]
 
