@@ -106,7 +106,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark text-xs sm:text-sm font-black text-black dark:text-white mb-4 sm:mb-6 uppercase">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark text-xs sm:text-sm font-black text-black dark:text-white mb-4 sm:mb-6 uppercase">
             Flexible Pricing
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black dark:text-white mb-3 sm:mb-4 uppercase px-4">
@@ -118,16 +118,16 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Tiers */}
-        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16 md:mb-24">
+        <div className="grid md:grid-cols-3 gap-10 sm:gap-12 md:gap-10 lg:gap-12 mb-10 sm:mb-12 md:mb-16 lg:mb-24">
           {pricingTiers.map((tier, index) => (
             <div
               key={index}
-              className={`relative p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark ${
+              className={`relative p-4 sm:p-5 md:p-6 lg:p-8 bg-white dark:bg-slate-900 border-2 sm:border-3 md:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark ${
                 tier.popular ? 'md:-mt-4 md:mb-4' : ''
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-4 sm:-top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-6 py-1.5 sm:py-2 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark">
+                <div className="absolute -top-4 sm:-top-6 left-1/2 transform -translate-x-1/2 px-4 sm:px-6 py-1.5 sm:py-2 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark">
                   <span className="text-black dark:text-white font-black text-xs sm:text-sm uppercase">
                     Most Popular
                   </span>
@@ -157,7 +157,7 @@ export default function Pricing() {
                 href={tier.ctaLink}
                 target={tier.ctaLink.startsWith('http') ? '_blank' : undefined}
                 rel={tier.ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 mb-6 sm:mb-8 text-base sm:text-lg font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 min-h-[44px] sm:min-h-0 ${
+                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 mb-6 sm:mb-8 text-base sm:text-lg font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 min-h-[44px] sm:min-h-0 ${
                   tier.popular
                     ? 'bg-gather-green dark:bg-gather-green text-black dark:text-white'
                     : 'bg-white dark:bg-slate-900 text-black dark:text-white'
@@ -198,18 +198,55 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark overflow-hidden">
+          {/* Mobile Card Layout */}
+          <div className="md:hidden space-y-4">
+            {comparisonFeatures.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-slate-900 border-2 border-black dark:border-white shadow-brutal-sm dark:shadow-brutal-sm-dark p-4"
+              >
+                <h4 className="text-sm font-black text-black dark:text-white mb-3 uppercase">
+                  {item.feature}
+                </h4>
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-black dark:text-white">Gather:</span>
+                    {item.gather === '✓' ? (
+                      <span className="inline-flex items-center justify-center w-6 h-6 bg-gather-green dark:bg-gather-green border-2 border-black dark:border-white font-black text-black dark:text-white text-sm">
+                        ✓
+                      </span>
+                    ) : (
+                      <span className="text-black dark:text-white font-bold text-sm">{item.gather}</span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-black dark:text-white">Others:</span>
+                    {item.others === '✗' ? (
+                      <span className="inline-flex items-center justify-center w-6 h-6 bg-red-500 dark:bg-red-600 border-2 border-black dark:border-white font-black text-white text-sm">
+                        ×
+                      </span>
+                    ) : (
+                      <span className="text-black dark:text-white font-bold text-sm">{item.others}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Table Layout */}
+          <div className="hidden md:block bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark overflow-hidden">
             <div className="overflow-x-auto -mx-4 sm:mx-0">
               <table className="w-full min-w-[500px]">
                 <thead>
                   <tr className="border-b-2 sm:border-b-4 border-black dark:border-white">
-                    <th className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-left text-sm sm:text-base md:text-lg font-black text-black dark:text-white uppercase bg-gather-green dark:bg-gather-green">
+                    <th className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-left text-sm md:text-base lg:text-lg font-black text-black dark:text-white uppercase bg-gather-green dark:bg-gather-green">
                       Feature
                     </th>
-                    <th className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center text-sm sm:text-base md:text-lg font-black text-black dark:text-white uppercase bg-gather-green dark:bg-gather-green">
+                    <th className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-center text-sm md:text-base lg:text-lg font-black text-black dark:text-white uppercase bg-gather-green dark:bg-gather-green">
                       Gather
                     </th>
-                    <th className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center text-sm sm:text-base md:text-lg font-black text-black dark:text-white uppercase bg-white dark:bg-slate-900">
+                    <th className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-center text-sm md:text-base lg:text-lg font-black text-black dark:text-white uppercase bg-white dark:bg-slate-900">
                       Others
                     </th>
                   </tr>
@@ -222,25 +259,25 @@ export default function Pricing() {
                         index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-800'
                       }`}
                     >
-                      <td className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-sm sm:text-base text-black dark:text-white font-bold">
+                      <td className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-sm md:text-base text-black dark:text-white font-bold">
                         {item.feature}
                       </td>
-                      <td className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center">
+                      <td className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-center">
                         {item.gather === '✓' ? (
-                          <span className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-gather-green dark:bg-gather-green border-2 border-black dark:border-white font-black text-black dark:text-white text-sm sm:text-base">
+                          <span className="inline-flex items-center justify-center w-6 sm:w-7 md:h-7 lg:w-8 lg:h-8 bg-gather-green dark:bg-gather-green border-2 border-black dark:border-white font-black text-black dark:text-white text-sm md:text-base">
                             ✓
                           </span>
                         ) : (
-                          <span className="text-black dark:text-white font-bold text-sm sm:text-base">{item.gather}</span>
+                          <span className="text-black dark:text-white font-bold text-sm md:text-base">{item.gather}</span>
                         )}
                       </td>
-                      <td className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center">
+                      <td className="px-3 md:px-4 lg:px-6 py-3 md:py-4 text-center">
                         {item.others === '✗' ? (
-                          <span className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-red-500 dark:bg-red-600 border-2 border-black dark:border-white font-black text-white text-sm sm:text-base">
+                          <span className="inline-flex items-center justify-center w-6 sm:w-7 md:h-7 lg:w-8 lg:h-8 bg-red-500 dark:bg-red-600 border-2 border-black dark:border-white font-black text-white text-sm md:text-base">
                             ×
                           </span>
                         ) : (
-                          <span className="text-black dark:text-white font-bold text-sm sm:text-base">{item.others}</span>
+                          <span className="text-black dark:text-white font-bold text-sm md:text-base">{item.others}</span>
                         )}
                       </td>
                     </tr>
@@ -251,8 +288,6 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Pricing FAQs */}
-        <FAQ faqs={pricingFAQs} title="Pricing Questions" />
       </div>
     </section>
   )

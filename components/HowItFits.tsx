@@ -12,7 +12,7 @@ export default function HowItFits() {
         
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <div className="space-y-4 sm:space-y-6">
-            <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark">
+            <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white flex items-center justify-center">
                 <span className="text-black dark:text-white font-black text-base sm:text-lg md:text-xl">✓</span>
               </div>
@@ -24,7 +24,7 @@ export default function HowItFits() {
               </div>
             </div>
             
-            <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark">
+            <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white flex items-center justify-center">
                 <span className="text-black dark:text-white font-black text-base sm:text-lg md:text-xl">⚡</span>
               </div>
@@ -37,13 +37,13 @@ export default function HowItFits() {
             </div>
           </div>
           
-          <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark">
+          <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark">
             <h3 className="text-lg sm:text-xl font-black text-black dark:text-white mb-4 sm:mb-6 text-center uppercase">Works With Your Stack</h3>
             <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
               {integrations.map((integration, index) => (
                 <span
                   key={index}
-                  className="px-3 sm:px-4 py-2 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark text-black dark:text-white font-black text-xs sm:text-sm uppercase hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 min-h-[36px] sm:min-h-0 flex items-center justify-center"
+                  className="px-3 sm:px-4 py-2 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark text-black dark:text-white font-black text-xs sm:text-sm uppercase hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 min-h-[36px] sm:min-h-0 flex items-center justify-center"
                 >
                   {integration}
                 </span>

@@ -15,7 +15,7 @@ export default function FinalCTA() {
             href="https://buy.stripe.com/7sY4gB7fC4zrgtadbZe3e0b"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 bg-white dark:bg-slate-900 text-black dark:text-white text-base sm:text-lg md:text-xl lg:text-2xl font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-2 hover:translate-y-2 transition-all duration-150 min-h-[44px] sm:min-h-0 w-full sm:w-auto"
+            className="group inline-flex items-center justify-center px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 bg-white dark:bg-slate-900 text-black dark:text-white text-base sm:text-lg md:text-xl lg:text-2xl font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-2 hover:translate-y-2 transition-all duration-150 min-h-[44px] sm:min-h-0 w-full sm:w-auto"
           >
             <span className="whitespace-nowrap">Get Started Free</span>
             <svg className="ml-2 sm:ml-3 md:ml-4 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 group-hover:translate-x-2 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>

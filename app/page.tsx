@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero'
 import Problem from '@/components/Problem'
 import FinalCTA from '@/components/FinalCTA'
-import TheShift from '@/components/TheShift'
 import WhoItsFor from '@/components/WhoItsFor'
 import Founder from '@/components/Founder'
 import Features from '@/components/Features'
@@ -9,7 +8,7 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import { generateStructuredData } from './metadata'
 
-const homeFAQs = [
+const allFAQs = [
   {
     question: 'Does Klaviyo integrate with Lightspeed X-Series?',
     answer: 'Klaviyo\'s native integration does not support Lightspeed Retail X. You need a third-party solution like Gather. Gather was built specifically for Lightspeed Retail X to Klaviyo integration, with real-time two-way sync and real human support.',
@@ -30,10 +29,34 @@ const homeFAQs = [
     question: 'Is Gather good for agencies managing multiple retail clients?',
     answer: 'Yes, Gather is specifically designed for agencies. It offers multi-client management from one dashboard, role-based access, priority support, and flat pricing that doesn\'t scale with transaction volume. This makes it cost-effective and efficient for agencies managing dozens of retail clients.',
   },
+  {
+    question: 'What are the pricing plans for Gather?',
+    answer: 'Gather offers three plans: Starter ($99/mo) for small-medium teams, Growth ($199/mo) for scaling businesses, and custom Enterprise pricing for large organizations. All plans include a 14-day free trial.',
+  },
+  {
+    question: 'Is there a free trial?',
+    answer: 'Yes! We offer a 14-day free trial on all plans. No credit card required to start your trial.',
+  },
+  {
+    question: 'Can I change plans later?',
+    answer: 'Absolutely. You can upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle.',
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards (Visa, Mastercard, American Express) and can arrange invoicing for Enterprise customers.',
+  },
+  {
+    question: 'Is there a setup fee?',
+    answer: 'No setup fees. Ever. You only pay the monthly subscription cost for your chosen plan.',
+  },
+  {
+    question: 'What if I need to cancel?',
+    answer: 'You can cancel anytime. No long-term contracts or cancellation fees. Your service continues until the end of your billing period.',
+  },
 ]
 
 export default function Home() {
-  const faqSchema = generateStructuredData('FAQPage', { faqs: homeFAQs })
+  const faqSchema = generateStructuredData('FAQPage', { faqs: allFAQs })
 
   return (
     <>
@@ -45,10 +68,9 @@ export default function Home() {
         <Hero />
         <Problem />
         <Features />
-        <TheShift />
         <WhoItsFor />
         <Pricing />
-        <FAQ faqs={homeFAQs} title="Frequently Asked Questions" />
+        <FAQ faqs={allFAQs} title="Frequently Asked Questions" />
         <Founder />
         <FinalCTA />
       </main>

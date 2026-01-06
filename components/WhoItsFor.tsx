@@ -9,7 +9,7 @@ export default function WhoItsFor() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-          <div className="p-4 sm:p-6 md:p-8 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark">
+          <div className="p-4 sm:p-6 md:p-8 bg-gather-green dark:bg-gather-green border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark">
             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black dark:bg-white border-2 sm:border-4 border-black dark:border-white flex items-center justify-center flex-shrink-0">
                 <span className="text-white dark:text-black font-black text-lg sm:text-xl md:text-2xl">✓</span>
@@ -21,7 +21,7 @@ export default function WhoItsFor() {
             </p>
           </div>
           
-          <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark opacity-70">
+          <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark opacity-70">
             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-slate-400 dark:bg-slate-600 border-2 sm:border-4 border-black dark:border-white flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-black text-lg sm:text-xl md:text-2xl">×</span>

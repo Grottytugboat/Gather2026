@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <div className="w-full">
-      <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark">
+      <div className="p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg lg:shadow-brutal-xl dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark lg:dark:shadow-brutal-xl-dark">
         <h3 className="text-2xl sm:text-3xl font-black text-black dark:text-white mb-4 sm:mb-6 uppercase">Get in Touch</h3>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-5">
           <div>
@@ -59,7 +59,7 @@ export default function ContactForm() {
               type="text"
               id="name"
               {...register('name', { required: 'Name is required' })}
-              className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 sm:border-4 border-black dark:border-white bg-white dark:bg-slate-900 text-black dark:text-white font-bold text-sm sm:text-base focus:outline-none focus:shadow-brutal dark:focus:shadow-brutal-dark transition-all min-h-[44px] sm:min-h-0"
+              className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 sm:border-4 border-black dark:border-white bg-white dark:bg-slate-900 text-black dark:text-white font-bold text-sm sm:text-base focus:outline-none focus:shadow-brutal-sm sm:focus:shadow-brutal dark:focus:shadow-brutal-sm-dark sm:dark:focus:shadow-brutal-dark transition-all min-h-[44px] sm:min-h-0"
               placeholder="YOUR NAME"
             />
             {errors.name && (
@@ -81,7 +81,7 @@ export default function ContactForm() {
                   message: 'Invalid email address',
                 },
               })}
-              className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 sm:border-4 border-black dark:border-white bg-white dark:bg-slate-900 text-black dark:text-white font-bold text-sm sm:text-base focus:outline-none focus:shadow-brutal dark:focus:shadow-brutal-dark transition-all min-h-[44px] sm:min-h-0"
+              className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 sm:border-4 border-black dark:border-white bg-white dark:bg-slate-900 text-black dark:text-white font-bold text-sm sm:text-base focus:outline-none focus:shadow-brutal-sm sm:focus:shadow-brutal dark:focus:shadow-brutal-sm-dark sm:dark:focus:shadow-brutal-dark transition-all min-h-[44px] sm:min-h-0"
               placeholder="YOU@AGENCY.COM"
             />
             {errors.email && (
@@ -108,7 +108,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gather-green dark:bg-gather-green text-black dark:text-white px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-base sm:text-lg font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none min-h-[44px] sm:min-h-0"
+            className="w-full bg-gather-green dark:bg-gather-green text-black dark:text-white px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-base sm:text-lg font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none min-h-[44px] sm:min-h-0"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center gap-2">
@@ -124,7 +124,7 @@ export default function ContactForm() {
           </button>
 
           {submitStatus === 'success' && (
-            <div className="p-4 bg-gather-green dark:bg-gather-green border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark">
+            <div className="p-4 bg-gather-green dark:bg-gather-green border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark">
               <p className="text-center text-black dark:text-white font-black">
                 ✓ THANKS! I'LL GET BACK TO YOU SOON.
               </p>
@@ -132,7 +132,7 @@ export default function ContactForm() {
           )}
 
           {submitStatus === 'error' && (
-            <div className="p-4 bg-red-500 dark:bg-red-600 border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark">
+            <div className="p-4 bg-red-500 dark:bg-red-600 border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark">
               <p className="text-center text-white font-black">
                 SOMETHING WENT WRONG. PLEASE TRY AGAIN.
               </p>

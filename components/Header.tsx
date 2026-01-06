@@ -35,7 +35,7 @@ export default function Header() {
               href="https://buy.stripe.com/7sY4gB7fC4zrgtadbZe3e0b"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 lg:px-6 py-2 lg:py-3 bg-gather-green dark:bg-gather-green text-black dark:text-white text-xs lg:text-sm font-black uppercase border-2 lg:border-4 border-black dark:border-white shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
+              className="px-4 lg:px-6 py-2 lg:py-3 bg-gather-green dark:bg-gather-green text-black dark:text-white text-xs lg:text-sm font-black uppercase border-2 lg:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
             >
               Get Started
             </a>
