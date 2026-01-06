@@ -7,9 +7,9 @@ import HamburgerMenu from './HamburgerMenu'
 export default function Header() {
   const navLinks = [
     { name: 'Product', href: '/lightspeed-klaviyo-integration' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Pricing', href: '/#pricing' },
     { name: 'Resources', href: '/blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
