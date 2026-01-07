@@ -67,8 +67,9 @@ function extractDescription(html: string, maxLength: number = 200): string {
   }
 
   // Fallback: extract any text
-  const text = $.text().trim()
-  return text.length > maxLength ? text.substring(0, maxLength) + '...' : text
+  const text = $('body').text() || $('*').text() || ''
+  const trimmed = text.trim()
+  return trimmed.length > maxLength ? trimmed.substring(0, maxLength) + '...' : trimmed
 }
 
 /**
