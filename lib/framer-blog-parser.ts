@@ -1,4 +1,4 @@
-import * as cheerio from 'cheerio'
+import { load } from 'cheerio'
 import { format, parse } from 'date-fns'
 import type { BlogPost } from '@/types/blog'
 
@@ -102,7 +102,7 @@ function determineCategory(title: string, content: string): string {
  * Convert Framer HTML to our blog format
  */
 function convertHtmlToBlogFormat(html: string): string {
-  const $ = cheerio.load(html)
+  const $ = load(html)
 
   // Remove scripts and styles
   $('script, style').remove()
@@ -178,7 +178,7 @@ export async function fetchBlogListing(): Promise<Array<{ title: string; url: st
     }
 
     const html = await response.text()
-    const $ = cheerio.load(html)
+    const $ = load(html)
     const posts: Array<{ title: string; url: string; date: string }> = []
 
     // Find all blog post links
@@ -251,7 +251,7 @@ export async function fetchBlogPost(url: string): Promise<BlogPost | null> {
     }
 
     const html = await response.text()
-    const $ = cheerio.load(html)
+    const $ = load(html)
 
     // Extract title
     const title = $('h1').first().text().trim() || $('title').text().trim()
