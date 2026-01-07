@@ -57,7 +57,7 @@ function parseDate(dateString: string): string {
  * Extract description from content (first paragraph or excerpt)
  */
 function extractDescription(html: string, maxLength: number = 200): string {
-  const $ = cheerio.load(html)
+  const $ = load(html)
   const firstParagraph = $('p').first().text().trim()
   
   if (firstParagraph) {
