@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { defaultMetadata } from '../metadata'
+import { getAllBlogPosts } from '@/lib/blog-storage'
+import type { BlogPostMetadata } from '@/types/blog'
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -8,8 +10,8 @@ export const metadata: Metadata = {
   description: 'Expert insights on Lightspeed Klaviyo integration, POS data sync, omnichannel marketing, and ecommerce data integration best practices.',
 }
 
-// Blog post metadata
-const blogPosts = [
+// Fallback hardcoded posts for backward compatibility
+const fallbackPosts: BlogPostMetadata[] = [
   {
     slug: 'lightspeed-to-klaviyo-integration-showdown-gather-vs-native-klaviyo-sync',
     title: 'Lightspeed to Klaviyo Integration Showdown: Gather vs. Native Klaviyo Sync',
@@ -47,7 +49,34 @@ const blogPosts = [
   },
 ]
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  // Try to load posts from JSON file, fallback to hardcoded
+  let blogPosts: BlogPostMetadata[] = []
+  
+  try {
+    const syncedPosts = await getAllBlogPosts()
+    blogPosts = syncedPosts.map((post) => ({
+      slug: post.slug,
+      title: post.title,
+      description: post.description,
+      date: post.date,
+      category: post.category,
+    }))
+  } catch (error) {
+    console.error('Error loading blog posts:', error)
+    // Fallback to hardcoded posts
+    blogPosts = fallbackPosts
+  }
+
+  // If no synced posts, use fallback
+  if (blogPosts.length === 0) {
+    blogPosts = fallbackPosts
+  }
+
+  // Sort by date (newest first)
+  blogPosts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
   return (
     <main className="min-h-screen bg-white dark:bg-slate-900 pt-20">
       {/* Hero Section */}
