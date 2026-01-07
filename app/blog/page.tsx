@@ -11,6 +11,13 @@ export const metadata: Metadata = {
 // Blog post metadata
 const blogPosts = [
   {
+    slug: 'lightspeed-to-klaviyo-integration-showdown-gather-vs-native-klaviyo-sync',
+    title: 'Lightspeed to Klaviyo Integration Showdown: Gather vs. Native Klaviyo Sync',
+    description: 'Compare Gather vs. Klaviyo\'s native Lightspeed integration head-to-head – from sync speed and data depth to support and ease of use.',
+    date: '2024-12-19',
+    category: 'Comparisons',
+  },
+  {
     slug: 'how-to-sync-lightspeed-retail-x-with-klaviyo',
     title: 'How to Sync Lightspeed Retail X with Klaviyo (Without Losing Your Mind)',
     description: 'A complete step-by-step guide to connecting Lightspeed X-Series to Klaviyo. Compare manual methods, Zapier, and Gather solutions.',
