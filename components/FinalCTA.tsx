@@ -5,10 +5,10 @@ export default function FinalCTA() {
     <section className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gather-green dark:bg-gather-green border-b-4 border-black dark:border-white">
       <div className="relative max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 z-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-black dark:text-white mb-4 sm:mb-6 uppercase px-4">
-          Tired of babysitting systems that quietly kill sales?
+          Stop letting old systems kill your sales and emails
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-          Join agencies who've stopped fighting integrations and started growing revenue.
+          Join agencies who've ditched broken integrations and started growing revenue.
         </p>
         <div className="px-4">
           <a

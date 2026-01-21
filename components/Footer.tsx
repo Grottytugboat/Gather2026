@@ -13,7 +13,7 @@ export default function Footer() {
   const resourceLinks = [
     { href: '/#pricing', label: 'Pricing' },
     { href: '/blog', label: 'Blog' },
-    { href: '/#contact', label: 'Contact' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   return (
@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="text-black dark:text-white font-bold hover:text-gather-green dark:hover:text-gather-green transition-colors"
                 >
                   Get Started

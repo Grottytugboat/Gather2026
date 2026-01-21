@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b /ad \"c:\\\\Users\\\\Tim\\\\Dropbox\\\\Sonder Clients\\\\HUGE\\\\2026 Gather\")",
+      "Bash(findstr:*)",
+      "Bash(npm run dev:*)",
+      "Bash(start http://localhost:3000/contact)",
+      "Bash(start http://localhost:3000)",
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

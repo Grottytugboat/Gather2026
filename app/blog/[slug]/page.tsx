@@ -240,9 +240,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         </section>
 
         {/* Content Section */}
-        <article className="py-24 px-6 bg-white dark:bg-slate-900 border-b-4 border-black dark:border-white">
-          <div className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-            <div className="text-black dark:text-white">
+        <article className="py-16 md:py-24 px-4 md:px-6 bg-white dark:bg-slate-900 border-b-4 border-black dark:border-white">
+          <div className="max-w-3xl mx-auto">
+            <div className="blog-content">
               {useHardcoded ? (
                 hardcodedPost.content
               ) : (
@@ -262,7 +262,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               Stop fighting broken integrations. Gather syncs your POS data to Klaviyo automatically, in real-time.
             </p>
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-5 bg-gather-green dark:bg-gather-green text-black dark:text-white text-lg font-black uppercase border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark transition-all"
             >
               Get Started Free

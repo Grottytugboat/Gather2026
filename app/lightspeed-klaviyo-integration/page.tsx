@@ -75,7 +75,7 @@ export default function LightspeedKlaviyoIntegrationPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
               <a
-                href="/#contact"
+                href="/contact"
                 className="group relative inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 bg-gather-green dark:bg-gather-green text-black dark:text-white text-base sm:text-lg font-black uppercase border-2 sm:border-4 border-black dark:border-white shadow-brutal-sm sm:shadow-brutal md:shadow-brutal-lg dark:shadow-brutal-sm-dark sm:dark:shadow-brutal-dark md:dark:shadow-brutal-lg-dark hover:shadow-brutal dark:hover:shadow-brutal-dark hover:translate-x-1 hover:translate-y-1 transition-all duration-150 min-h-[44px]"
               >
                 Get Started Free

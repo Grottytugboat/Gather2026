@@ -131,7 +131,7 @@ export default function IntegrationsIndexPage() {
               Tell us what you’re connecting and we’ll point you in the right direction.
             </p>
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-5 bg-gather-green dark:bg-gather-green text-black dark:text-white text-lg font-black uppercase border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-lg-dark transition-all"
             >
               Contact us

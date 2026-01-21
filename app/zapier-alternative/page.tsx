@@ -73,7 +73,7 @@ export default function ZapierAlternativePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a
-                href="/#contact"
+                href="/contact"
                 className="group relative inline-flex items-center justify-center px-8 py-5 bg-gather-green text-white text-lg font-semibold rounded-lg hover:bg-gather-green-dark shadow-lg shadow-gather-green/25 hover:shadow-xl hover:shadow-gather-green/30 transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Try Gather Free

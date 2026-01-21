@@ -6,6 +6,7 @@ import Founder from '@/components/Founder'
 import Features from '@/components/Features'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
+import Testimonials from '@/components/Testimonials'
 import { generateStructuredData } from './metadata'
 
 const allFAQs = [
@@ -66,6 +67,7 @@ export default function Home() {
       />
       <main className="min-h-screen bg-white dark:bg-slate-900 pt-20">
         <Hero />
+        <Testimonials />
         <Problem />
         <Features />
         <WhoItsFor />

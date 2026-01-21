@@ -1,11 +1,16 @@
 import React from 'react'
 
 /**
- * Convert HTML string to React components
- * This is a simplified version - in production you might want to use a library like html-react-parser
+ * Render blog content with proper styling for Tailwind/brutalist design
  */
 export function renderBlogContent(html: string): React.ReactNode {
-  // For now, we'll use dangerouslySetInnerHTML
-  // In a production app, you might want to parse and sanitize the HTML
-  return <div dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <div
+      className="blog-content"
+      dangerouslySetInnerHTML={{ __html: html }}
+      style={{
+        // Global styles for the blog content container
+      }}
+    />
+  )
 }

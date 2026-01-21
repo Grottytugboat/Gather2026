@@ -13,14 +13,14 @@ export default function HamburgerMenu() {
       { name: 'Zapier Alternative', href: '/zapier-alternative' },
       { name: 'Agency Tool', href: '/agency-tools' },
     ]},
-    { title: 'Resources', links: [
+    { title: 'Insights', links: [
       { name: 'Pricing', href: '/#pricing' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/#contact' },
+      { name: 'Contact', href: '/contact' },
     ]},
     { title: 'Company', links: [
       { name: 'Home', href: '/' },
-      { name: 'Get Started', href: '/#contact' },
+      { name: 'Get Started', href: '/contact' },
     ]},
   ]
 

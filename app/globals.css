@@ -41,3 +41,108 @@ html {
     text-wrap: balance;
   }
 }
+
+/* Blog Content Styles */
+.blog-content {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+.blog-content h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-8 mt-12 text-black dark:text-white leading-tight;
+}
+
+.blog-content h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-6 mt-10 text-black dark:text-white leading-tight;
+}
+
+.blog-content h3 {
+  @apply text-xl md:text-2xl lg:text-3xl font-black uppercase mb-4 mt-8 text-black dark:text-white;
+}
+
+.blog-content h4 {
+  @apply text-lg md:text-xl font-black uppercase mb-3 mt-6 text-black dark:text-white;
+}
+
+.blog-content p {
+  @apply mb-6 text-black dark:text-white leading-relaxed;
+}
+
+.blog-content strong,
+.blog-content b {
+  @apply font-bold text-black dark:text-white;
+}
+
+.blog-content em,
+.blog-content i {
+  @apply italic;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply mb-6 ml-6 space-y-3;
+}
+
+.blog-content ul {
+  @apply list-disc;
+}
+
+.blog-content ol {
+  @apply list-decimal;
+}
+
+.blog-content li {
+  @apply text-black dark:text-white leading-relaxed pl-2;
+}
+
+.blog-content li > ul,
+.blog-content li > ol {
+  @apply mt-3 mb-3;
+}
+
+.blog-content a {
+  @apply text-gather-green dark:text-gather-green font-bold underline hover:no-underline transition-all;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-black dark:border-white pl-6 pr-6 py-4 mb-6 bg-slate-50 dark:bg-slate-800 italic font-bold;
+}
+
+.blog-content code {
+  @apply bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm font-mono border border-black dark:border-white;
+}
+
+.blog-content pre {
+  @apply bg-slate-100 dark:bg-slate-800 p-4 md:p-6 rounded mb-6 overflow-x-auto border-2 border-black dark:border-white;
+}
+
+.blog-content pre code {
+  @apply bg-transparent border-none p-0;
+}
+
+.blog-content table {
+  @apply w-full mb-6 border-2 md:border-4 border-black dark:border-white;
+}
+
+.blog-content thead {
+  @apply bg-gather-green dark:bg-gather-green;
+}
+
+.blog-content th {
+  @apply px-4 py-3 text-left font-black uppercase text-black dark:text-black border-2 border-black dark:border-white;
+}
+
+.blog-content td {
+  @apply px-4 py-3 border-2 border-black dark:border-white text-black dark:text-white;
+}
+
+.blog-content tr:nth-child(even) {
+  @apply bg-slate-50 dark:bg-slate-800;
+}
+
+.blog-content img {
+  @apply w-full h-auto my-8 border-4 border-black dark:border-white shadow-brutal-lg dark:shadow-brutal-lg-dark;
+}
+
+.blog-content hr {
+  @apply my-12 border-t-4 border-black dark:border-white;
+}

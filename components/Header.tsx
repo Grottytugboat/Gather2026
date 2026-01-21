@@ -8,8 +8,8 @@ export default function Header() {
   const navLinks = [
     { name: 'Product', href: '/lightspeed-klaviyo-integration' },
     { name: 'Pricing', href: '/#pricing' },
-    { name: 'Resources', href: '/blog' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Insights', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
