@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 import type { BlogPost, BlogPostsData } from '@/types/blog'
+import { getAllMarkdownPosts, getMarkdownPostBySlug } from './blog-markdown'
 
 const DATA_DIR = path.join(process.cwd(), 'data')
 const BLOG_POSTS_FILE = path.join(DATA_DIR, 'blog-posts.json')
@@ -43,17 +44,29 @@ export async function writeBlogPosts(data: BlogPostsData): Promise<void> {
 }
 
 /**
- * Get all blog posts
+ * Get all blog posts - now reads from markdown files first, then JSON as fallback
  */
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  // Try markdown files first
+  const mdPosts = await getAllMarkdownPosts()
+  if (mdPosts.length > 0) {
+    return mdPosts
+  }
+  // Fallback to JSON
   const data = await readBlogPosts()
   return data.posts
 }
 
 /**
- * Get a single blog post by slug
+ * Get a single blog post by slug - tries markdown first, then JSON
  */
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  // Try markdown first
+  const mdPost = await getMarkdownPostBySlug(slug)
+  if (mdPost) {
+    return mdPost
+  }
+  // Fallback to JSON
   const posts = await getAllBlogPosts()
   return posts.find((post) => post.slug === slug) || null
 }
