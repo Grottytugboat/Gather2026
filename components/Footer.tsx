@@ -8,18 +8,29 @@ export default function Footer() {
     { href: '/pos-to-klaviyo', label: 'POS to Klaviyo' },
     { href: '/zapier-alternative', label: 'Zapier Alternative' },
     { href: '/agency-tools', label: 'Agency Tools' },
+    { href: '/integrations', label: 'All Integrations' },
   ]
 
   const resourceLinks = [
     { href: '/#pricing', label: 'Pricing' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
+    { href: '/locations', label: 'Locations' },
+  ]
+
+  const locationLinks = [
+    { href: '/locations/sydney', label: 'Sydney' },
+    { href: '/locations/melbourne', label: 'Melbourne' },
+    { href: '/locations/brisbane', label: 'Brisbane' },
+    { href: '/locations/perth', label: 'Perth' },
+    { href: '/locations/adelaide', label: 'Adelaide' },
+    { href: '/locations/gold-coast', label: 'Gold Coast' },
   ]
 
   return (
     <footer className="bg-white dark:bg-slate-900 border-t-4 border-black dark:border-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 py-8 sm:py-10 md:py-12">
-        <div className="grid md:grid-cols-3 gap-6 sm:gap-7 md:gap-8 mb-6 sm:mb-7 md:mb-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-7 md:gap-8 mb-6 sm:mb-7 md:mb-8">
           {/* Product Links */}
           <div>
             <h3 className="text-lg font-black text-black dark:text-white mb-4 uppercase">
@@ -78,6 +89,33 @@ export default function Footer() {
                   className="text-black dark:text-white font-bold hover:text-gather-green dark:hover:text-gather-green transition-colors"
                 >
                   Get Started
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h3 className="text-lg font-black text-black dark:text-white mb-4 uppercase">
+              Locations
+            </h3>
+            <ul className="space-y-3">
+              {locationLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-black dark:text-white font-bold hover:text-gather-green dark:hover:text-gather-green transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/locations"
+                  className="text-gather-green dark:text-gather-green font-bold hover:opacity-80 transition-opacity"
+                >
+                  View All →
                 </Link>
               </li>
             </ul>

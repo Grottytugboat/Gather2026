@@ -12,6 +12,15 @@ export default function HamburgerMenu() {
       { name: 'POS to Klaviyo', href: '/pos-to-klaviyo' },
       { name: 'Zapier Alternative', href: '/zapier-alternative' },
       { name: 'Agency Tool', href: '/agency-tools' },
+      { name: 'All Integrations', href: '/integrations' },
+    ]},
+    { title: 'Locations', links: [
+      { name: 'All Locations', href: '/locations' },
+      { name: 'Sydney', href: '/locations/sydney' },
+      { name: 'Melbourne', href: '/locations/melbourne' },
+      { name: 'Brisbane', href: '/locations/brisbane' },
+      { name: 'Perth', href: '/locations/perth' },
+      { name: 'Adelaide', href: '/locations/adelaide' },
     ]},
     { title: 'Insights', links: [
       { name: 'Pricing', href: '/#pricing' },
@@ -20,6 +29,7 @@ export default function HamburgerMenu() {
     ]},
     { title: 'Company', links: [
       { name: 'Home', href: '/' },
+      { name: 'Partners', href: '/partners' },
       { name: 'Get Started', href: '/contact' },
     ]},
   ]

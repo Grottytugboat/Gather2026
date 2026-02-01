@@ -7,6 +7,8 @@ import Features from '@/components/Features'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import Testimonials from '@/components/Testimonials'
+import LocationsPreview from '@/components/LocationsPreview'
+import PartnersPreview from '@/components/PartnersPreview'
 import { generateStructuredData } from './metadata'
 
 const allFAQs = [
@@ -71,6 +73,8 @@ export default function Home() {
         <Problem />
         <Features />
         <WhoItsFor />
+        <PartnersPreview />
+        <LocationsPreview />
         <Pricing />
         <FAQ faqs={allFAQs} title="Frequently Asked Questions" />
         <Founder />
