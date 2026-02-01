@@ -1,7 +1,7 @@
 ---
 title: "Why Your In-Store Sales Aren't Triggering Klaviyo Flows (And How to Fix It)"
 slug: "in-store-sales-klaviyo-flows"
-date: "2026-02-02"
+date: "2026-02-03"
 author: "Tim Sullivan"
 excerpt: "Your Shopify customers get post-purchase emails. Your in-store customers get nothing. Here's how to fix the omnichannel blindspot."
 tags: ["lightspeed", "klaviyo", "in-store", "omnichannel", "pos", "email automation"]

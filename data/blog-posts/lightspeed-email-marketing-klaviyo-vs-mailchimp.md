@@ -1,7 +1,7 @@
 ---
 title: "Lightspeed Email Marketing: Why Klaviyo Beats Mailchimp (With Proper Integration)"
 slug: "lightspeed-email-marketing-klaviyo-vs-mailchimp"
-date: "2026-02-02"
+date: "2026-02-05"
 author: "Tim Sullivan"
 excerpt: "Stuck between Lightspeed's limited native options and Mailchimp's clunky integration? Here's why Klaviyo is the answer—if you can connect it properly."
 tags: ["lightspeed", "klaviyo", "mailchimp", "email marketing", "comparison"]

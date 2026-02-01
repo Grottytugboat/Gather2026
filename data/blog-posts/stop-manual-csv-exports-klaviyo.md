@@ -1,7 +1,7 @@
 ---
 title: "Stop Manually Exporting CSVs: Real-Time Lightspeed to Klaviyo Sync"
 slug: "stop-manual-csv-exports-klaviyo"
-date: "2026-02-02"
+date: "2026-02-04"
 author: "Tim Sullivan"
 excerpt: "Still downloading CSVs from Lightspeed and uploading to Klaviyo? There's a better way that takes 10 minutes to set up."
 tags: ["lightspeed", "klaviyo", "csv", "automation", "sync", "integration"]
