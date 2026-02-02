@@ -8,6 +8,8 @@ tags: ["lightspeed", "klaviyo", "in-store", "omnichannel", "pos", "email automat
 featured: false
 ---
 
+![In-Store Sales to Klaviyo](/blog/in-store-sales-klaviyo.jpg)
+
 # Why Your In-Store Sales Aren't Triggering Klaviyo Flows (And How to Fix It)
 
 Your Shopify customer abandons a cart. Within an hour, they get an email. They complete a purchase. They get a thank you, a review request, product recommendations.

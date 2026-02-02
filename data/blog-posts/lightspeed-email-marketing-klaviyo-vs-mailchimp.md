@@ -8,6 +8,8 @@ tags: ["lightspeed", "klaviyo", "mailchimp", "email marketing", "comparison"]
 featured: false
 ---
 
+![Klaviyo vs Mailchimp for Lightspeed](/blog/klaviyo-vs-mailchimp.jpg)
+
 # Lightspeed Email Marketing: Why Klaviyo Beats Mailchimp (With Proper Integration)
 
 If you're a Lightspeed retailer looking for email marketing, you've probably considered three options:

@@ -8,6 +8,8 @@ tags: ["lightspeed", "klaviyo", "integration", "x-series", "pos"]
 featured: true
 ---
 
+![Lightspeed to Klaviyo Integration](/blog/lightspeed-klaviyo-integration.jpg)
+
 # How to Connect Lightspeed X-Series to Klaviyo (Without $6K Custom Development)
 
 If you've tried to connect Lightspeed Retail X-Series to Klaviyo, you've probably hit a wall.

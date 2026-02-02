@@ -8,6 +8,8 @@ tags: ["lightspeed", "klaviyo", "csv", "automation", "sync", "integration"]
 featured: false
 ---
 
+![Stop CSV Exports - Automate Your Sync](/blog/stop-csv-exports.jpg)
+
 # Stop Manually Exporting CSVs: Real-Time Lightspeed to Klaviyo Sync
 
 Every week, the same ritual:
