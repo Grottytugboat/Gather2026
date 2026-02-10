@@ -257,7 +257,7 @@ export default function PartnersPage() {
           </div>
 
           <form 
-            action="https://formspree.io/f/xpwzgvkd" 
+            action="https://formspree.io/f/mreabdzv" 
             method="POST"
             className="bg-white dark:bg-slate-900 border-4 border-black dark:border-white shadow-brutal-xl dark:shadow-brutal-xl-dark p-6 sm:p-8"
           >
